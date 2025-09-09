@@ -156,6 +156,7 @@ $tf/
 .fseventsd/
 .history/
 .hypothesis/
+.idea/
 .idea/**/aws.xml
 .idea/**/contentModel.xml
 .idea/**/dataSources.ids
