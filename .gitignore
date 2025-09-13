@@ -137,6 +137,7 @@ $tf/
 *_wpftmp.csproj
 *~
 .*crunch*.local.xml
+.DS_Store
 .Python
 .Trashes
 .abstra/
@@ -214,7 +215,6 @@ $tf/
 ASALocalRun/
 AppPackages/
 AutoTest.Net/
-backup*/
 BenchmarkDotNet.Artifacts/
 BundleArtifacts/
 ClientBin/
@@ -276,6 +276,7 @@ __pypackages__/
 _pkginfo.txt
 artifacts/
 atlassian-ide-plugin.xml
+backup*/
 bld/
 boot_out.txt
 build/
@@ -298,6 +299,7 @@ develop-eggs/
 dist/
 dlldata.c
 dmypy.json
+docs/.obsidian/
 docs/_build/
 downloads/
 ecf/
@@ -335,6 +337,7 @@ pyvenv.cfg
 rcf/
 sdist/
 share/python-wheels/
+src/
 target/
 var/
 venv.bak/
