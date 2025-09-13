@@ -19,9 +19,14 @@
 - **Optional**: pytest, black for development tools
 
 #### Setup Commands
+
 ```bash
 # Clone the repository
-git checkout session/01
+git clone git@github.com:psenger/ai-powered-choose-your-own-adventure.git ai-powered-choose-your-own-adventure
+chmod +x load_session.sh
+
+# start session 1
+./load_session.sh
 
 # Create and activate virtual environment (IMPORTANT!)
 python3 -m venv .venv
@@ -32,14 +37,11 @@ source .venv/bin/activate
 # On Windows:
 .venv\Scripts\activate
 
-# Install dependencies (minimal for Day 1 - only requests for future AI features)
-pip install requests
-
 # OR install everything from requirements file
 pip install -r requirements.txt
 
-# Test the game works - simple console interface!
-python3 main.py
+# Test if everything works - simple console interface!
+python3 src/hello-world.py
 
 # When done, deactivate virtual environment
 deactivate
@@ -67,7 +69,7 @@ deactivate
 - [ ] Create virtual environment with `python3 -m venv .venv`
 - [ ] Activate virtual environment (`source .venv/bin/activate` or `.venv\Scripts\activate`)
 - [ ] Install required packages with `pip install -r requirements.txt`
-- [ ] Successfully run the console adventure game with `python3 main.py`
+- [ ] Successfully run the console adventure game with `python3 src/hello-world.py`
 - [ ] Navigate through the game using number choices and Enter key
 - [ ] Change player starting health in config.py (try 50, 150, 200)
 - [ ] Modify their character name in config.py to their own name
