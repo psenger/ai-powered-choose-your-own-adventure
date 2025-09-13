@@ -214,7 +214,7 @@ $tf/
 ASALocalRun/
 AppPackages/
 AutoTest.Net/
-Backup*/
+backup*/
 BenchmarkDotNet.Artifacts/
 BundleArtifacts/
 ClientBin/

@@ -66,18 +66,25 @@ An educational Python project that teaches young students (Years 3-5) the basics
   * [7.2 Installation](#72-installation)
   * [7.3 Post-Installation Verification](#73-post-installation-verification)
   * [7.4 Troubleshooting Dependencies](#74-troubleshooting-dependencies)
-- [Step 8: Ollama Installation (Optional)](#step-8-ollama-installation-optional)
-  * [8.1 Pre-Installation Check](#81-pre-installation-check)
-  * [8.2 Installation Instructions](#82-installation-instructions)
+- [Step 8: Session Management](#step-8-session-management)
+  * [8.1 Understanding the Session System](#81-understanding-the-session-system)
+  * [8.2 Using the Session Loader](#82-using-the-session-loader)
+  * [8.3 How to Use the Session Loader](#83-how-to-use-the-session-loader)
+  * [8.4 Session Structure](#84-session-structure)
+  * [8.5 Backup System](#85-backup-system)
+  * [8.6 Best Practices](#86-best-practices)
+- [Step 9: Ollama Installation (Optional)](#step-9-ollama-installation-optional)
+  * [9.1 Pre-Installation Check](#91-pre-installation-check)
+  * [9.2 Installation Instructions](#92-installation-instructions)
     + [Windows Installation](#windows-installation-3)
     + [macOS Installation](#macos-installation-3)
     + [Raspberry Pi Installation](#raspberry-pi-installation-3)
-  * [8.3 Download Model](#83-download-model)
-  * [8.4 Post-Installation Verification](#84-post-installation-verification)
-  * [8.5 Troubleshooting Ollama](#85-troubleshooting-ollama)
-- [Step 9: Configure for Network Ollama (If Provided by Instructor)](#step-9-configure-for-network-ollama-if-provided-by-instructor)
-  * [9.1 Configuration](#91-configuration)
-  * [9.2 Test Network Connection](#92-test-network-connection)
+  * [9.3 Download Model](#93-download-model)
+  * [9.4 Post-Installation Verification](#94-post-installation-verification)
+  * [9.5 Troubleshooting Ollama](#95-troubleshooting-ollama)
+- [Step 10: Configure for Network Ollama (If Provided by Instructor)](#step-10-configure-for-network-ollama-if-provided-by-instructor)
+  * [10.1 Configuration](#101-configuration)
+  * [10.2 Test Network Connection](#102-test-network-connection)
 - [🎮 Running the Adventure](#%F0%9F%8E%AE-running-the-adventure)
   * [Final Setup Verification](#final-setup-verification)
   * [Run the Game](#run-the-game)
@@ -574,9 +581,83 @@ python -c "import tkinter; print('tkinter OK')"
 
 ---
 
-## Step 8: Ollama Installation (Optional)
+## Step 8: Session Management
 
-### 8.1 Pre-Installation Check
+### 8.1 Understanding the Session System
+
+This project includes a session management system that allows you to switch between different course days or development stages. Each session represents a complete state of the project at a specific point in the course.
+
+### 8.2 Using the Session Loader
+
+The `load_session.sh` script helps you:
+1. **Backup your current work** - Creates a timestamped backup of your current `src` directory
+2. **Switch to a specific session** - Loads the code for a particular course day
+3. **Preserve your progress** - Ensures no work is lost when switching sessions
+
+### 8.3 How to Use the Session Loader
+
+1. **Make the script executable** (first time only):
+   ```bash
+   chmod +x load_session.sh
+   ```
+
+2. **Run the session loader**:
+   ```bash
+   ./load_session.sh
+   ```
+
+3. **Select your desired session**:
+   The script will show available sessions:
+   ```
+   What session would you like to load?
+   
+   1. Session 1
+   2. Session 2
+   3. Session 3
+   4. Session 4
+   5. Session 5
+   
+   Enter your choice (1-5):
+   ```
+
+4. **Confirm the operation**:
+   The script will:
+   - Create a backup: `backup/src-2025-09-13-04-27-20-pm.tar.gz`
+   - Clear the current `src` directory
+   - Load the selected session code into `src`
+
+### 8.4 Session Structure
+
+- **Session 1**: Basic Python setup and simple story structure
+- **Session 2**: Adding GUI with Tkinter
+- **Session 3**: Implementing choice mechanics
+- **Session 4**: AI integration basics
+- **Session 5**: Complete adventure game with advanced features
+
+### 8.5 Backup System
+
+Your work is automatically backed up to the `backup/` directory with timestamps:
+- Format: `src-YYYY-MM-DD-HH-MM-SS-am/pm.tar.gz`
+- Example: `src-2025-09-13-04-27-20-pm.tar.gz`
+
+To restore from a backup:
+```bash
+cd src
+tar -xzf ../backup/src-2025-09-13-04-27-20-pm.tar.gz
+```
+
+### 8.6 Best Practices
+
+- **Always use the session loader** instead of manually copying files
+- **Run the script from the project root directory**
+- **Your backups are preserved** - you can always restore previous work
+- **Start each day with the appropriate session** for the course
+
+---
+
+## Step 9: Ollama Installation (Optional)
+
+### 9.1 Pre-Installation Check
 
 ```bash
 ollama --version
@@ -587,7 +668,7 @@ ollama list
 ```
 **If "llama3.2" is listed, skip to Step 9 ✅**
 
-### 8.2 Installation Instructions
+### 9.2 Installation Instructions
 
 #### Windows Installation
 1. Visit https://ollama.com/download/windows
@@ -606,14 +687,14 @@ ollama list
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-### 8.3 Download Model
+### 9.3 Download Model
 
 ```bash
 ollama pull llama3.2
 ```
 This downloads ~2GB, may take 5-10 minutes.
 
-### 8.4 Post-Installation Verification
+### 9.4 Post-Installation Verification
 
 1. Check Ollama running:
    ```bash
@@ -627,7 +708,7 @@ This downloads ~2GB, may take 5-10 minutes.
    ```
    Press Ctrl+D to exit
 
-### 8.5 Troubleshooting Ollama
+### 9.5 Troubleshooting Ollama
 
 **Problem: "ollama: command not found"**
 - Windows: Restart computer
@@ -647,9 +728,9 @@ This downloads ~2GB, may take 5-10 minutes.
 
 ---
 
-## Step 9: Configure for Network Ollama (If Provided by Instructor)
+## Step 10: Configure for Network Ollama (If Provided by Instructor)
 
-### 9.1 Configuration
+### 10.1 Configuration
 
 If instructor provides network Ollama:
 
@@ -663,7 +744,7 @@ If instructor provides network Ollama:
    OLLAMA_URL = "http://[instructor-ip]:11434"
    ```
 
-### 9.2 Test Network Connection
+### 10.2 Test Network Connection
 
 ```python
 import requests
