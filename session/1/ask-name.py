@@ -1,7 +1,8 @@
-# <-- this symbol is a comment, and tells the computer to ignore everything after it
+# <-- this symbol is a comment and tells the computer to ignore everything after it
 
 # Welcome message - greet the player
-print("Welcome to your adventure!")
+print("🎮 Welcome to the Adventure Game!")
+print("You are standing at the edge of a dark forest.")
 print("=" * 30)  # Print a decorative line
 
 # Ask for the player's name and store it in a variable
