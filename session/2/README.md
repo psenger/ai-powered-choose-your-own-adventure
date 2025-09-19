@@ -1,0 +1,1 @@
+# Session 2 - What is a function

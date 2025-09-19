@@ -179,11 +179,11 @@ print(pos_info["catchphrase"])    # Shows: SKADOOSH!
 
 ---
 
-## Nested Data Structures 📦📦🎁
+## Nested Data Structures ( Graph )📦📦🎁
 
 ![cute-panda-yells.png](attachments/cute-panda-yells.png)
 
-**Analogy:** Think of **Chinese takeaway containers**! 🥡 You get the big container, but inside there's another container with spring rolls, and inside THAT container might be individual sauce packets! A nested dictionary is like those containers - dictionaries inside dictionaries, keeping everything organised just like how Mr. Ping organises his noodle shop!
+**Analogy:** Think of **Chinese takeaway containers**! 🥡 You get the big container, but inside there's another container with spring rolls with some rice, and inside THAT container might be individual sauce packets! A nested dictionary is like those containers - dictionaries inside dictionaries, keeping everything organised just like how Mr. Ping organises his noodle shop!
 
 ```mermaid
 graph TD
@@ -200,6 +200,8 @@ graph TD
     G --> L{"Key: 3"};
     L --> M["Practice on the training dummy 🎯"];
 ```
+
+Why is this concept important? Because it's like a **graph**! A graph is a collection of nodes and edges, where each node is a **key** and each edge is a **value**. In this case, the nodes are the **locations** (keys) and the edges are the **choices** (values).
 
 ```python
 jade_palace_adventure = {
