@@ -268,7 +268,7 @@ def collect_rewards(current_story: dict, inventory: set[str]) -> set[str]:
 
 
 def main():
-    
+
     inventory = set()
     current_story_id = "start"
 
