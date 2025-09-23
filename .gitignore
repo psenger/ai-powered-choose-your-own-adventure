@@ -337,6 +337,7 @@ pyvenv.cfg
 rcf/
 sdist/
 share/python-wheels/
+src/
 target/
 var/
 venv.bak/
