@@ -1,6 +1,6 @@
 # AI-Powered Choose Your Own Adventure
 
-An educational Python project that teaches young students (Years 3-5) the basics of computer science through interactive storytelling powered by AI.
+A comprehensive 3-day Python programming course for children aged 9-11, teaching fundamental programming concepts through an interactive, AI-enhanced adventure game. This educational project guides young learners through a carefully structured journey from basic Python programming to building complete applications with AI integration.
 
 > **📌 Important**: This repository uses different branches for each day of the course. The `main` branch contains the complete project. Students should start with `session/01` for Day 1. See [Project Structure](#-project-structure---daily-branches) below for details.
 
@@ -8,6 +8,8 @@ An educational Python project that teaches young students (Years 3-5) the basics
 
 - [Table of Contents](#table-of-contents)
 - [🎯 Learning Objectives](#%F0%9F%8E%AF-learning-objectives)
+- [What Students Will Build](#what-students-will-build)
+- [Course Philosophy](#course-philosophy)
 - [📋 Prerequisites](#%F0%9F%93%8B-prerequisites)
 - [🚀 Complete Installation Guide](#%F0%9F%9A%80-complete-installation-guide)
 - [Step 1: Python Installation](#step-1-python-installation)
@@ -96,11 +98,84 @@ An educational Python project that teaches young students (Years 3-5) the basics
 
 ## 🎯 Learning Objectives
 
+### Learning Progression
+
+**Day 1: Foundation & Setup**
+- Environment setup with Python 3.11+ and virtual environments
+- Basic programming primitives (strings, numbers, variables)
+- Input/output operations and user interaction
+- Simple decision making with if-else statements
+- Basic loops and repetition
+
+**Day 2: Core Programming Concepts**
+- Advanced decision making and logical operations
+- Function creation and parameter handling
+- Introduction to AI integration concepts
+- Code organization and structure
+
+**Day 3: Complete Application Development**
+- File-based data management
+- Complex game mechanics and state management
+- AI API integration with fallback systems
+- Final project completion and personalization
+
+### Technical Skills Acquired
+
 - **Introduction to Python Programming**: Variables, functions, conditionals, and loops
-- **GUI Development**: Working with Tkinter for desktop applications  
-- **AI Integration**: Understanding how to interact with AI models
+- **AI Integration**: Understanding how to interact with AI models safely with fallbacks
+- **Data Management**: Reading and writing configuration files
 - **Game Design**: Story structure, player choices, and state management
 - **Problem Solving**: Debugging and iterative development
+- **Network Programming**: HTTP requests and API communication
+
+## What Students Will Build
+
+### The Enchanted Forest Adventure
+
+Students create an interactive text-based adventure game featuring:
+
+- **Dynamic storytelling** powered by AI (with reliable fallbacks)
+- **Inventory management** and item collection mechanics
+- **Puzzle-solving elements** requiring logical thinking
+- **Multiple story paths** leading to different outcomes
+- **Personalized content** adapted to individual player choices
+
+### Key Programming Concepts Learned
+
+1. **Data Types and Variables**: Strings, numbers, booleans, and lists
+2. **Control Flow**: Decision making and loops for game logic
+3. **Functions**: Organizing code into reusable components
+4. **File Operations**: Reading configuration and story data
+5. **API Integration**: Connecting to AI services with error handling
+6. **User Interface**: Creating engaging command-line interactions
+
+## Course Philosophy
+
+### Child-Friendly Learning Approach
+
+- **Visual metaphors** and familiar analogies (LEGO blocks, conversations)
+- **Australian context** with relatable examples and encouraging language
+- **Immediate feedback** through interactive programs and visible results
+- **Progressive complexity** building confidence with each success
+
+### Hands-On Discovery Method
+
+- **Show first**: Demonstrate working code before explaining theory
+- **Modify second**: Let students change working code to see effects
+- **Create third**: Build new features once concepts are understood
+- **Break things safely**: Encourage experimentation and learning from errors
+
+### Educational Outcomes
+
+By completing this course, students will:
+
+- Understand fundamental programming concepts applicable to any language
+- Have experience with real-world development tools and practices
+- Feel confident about their ability to create functional applications
+- Possess a personalized game they built and can share with friends
+- Be prepared for advanced programming concepts and continued learning
+
+This course transforms complete beginners into young programmers who understand how software works and feel excited about creating their own digital projects.
 
 ## 📋 Prerequisites
 
@@ -628,11 +703,51 @@ The `load_session.sh` script helps you:
 
 ### 8.4 Session Structure
 
-- **Session 1**: Basic Python setup and simple story structure
-- **Session 2**: Adding GUI with Tkinter
-- **Session 3**: Implementing choice mechanics
-- **Session 4**: AI integration basics
-- **Session 5**: Complete adventure game with advanced features
+The course uses a session-based approach where each learning module is contained in its own session folder:
+
+```
+session/1/    # Module 1 - Programming Primitives
+session/2/    # Module 2 - Functions and Organization
+session/3/    # Module 3 - AI Integration Basics
+session/4/    # Module 4 - File Operations and Data
+session/5/    # Module 5 - Complete AI-Powered Game
+```
+
+**Session 1: Programming Primitives and Fundamentals**
+- Introduction to Python programming fundamentals
+- Basic data types (strings, numbers, booleans)
+- Input/output operations and user interaction
+- Simple decision making with if-else statements
+- Basic loops and repetition
+- File: `hello-world.py`, `primitives-demo.py`, `input-output-demo.py`, `if-else-demo.py`, `loops-demo.py`
+
+**Session 2: Functions and Organization**
+- Understanding what functions are and how to create them
+- Function parameters and return values
+- Code organization and program structure
+- The `if __name__ == "__main__"` pattern
+- File: `main.py` (focus on functions)
+
+**Session 3: AI Integration Basics**
+- HTTP API calls to external AI systems (Ollama)
+- Handling network errors gracefully
+- Building robust applications with AI services
+- Master Oogway character interaction demo
+- Files: `main.py` (AI integration), `test-ollama.py`
+
+**Session 4: File Operations and Data Management**
+- Reading and processing data from external files
+- Using Python's `configparser` library
+- Creating data-driven applications
+- Separating game logic from content
+- Files: `main.py`, `data.ini`, `stories.ini`, `write-file.py`, `path-finder.py`
+
+**Session 5: Complete AI-Powered Adventure Game**
+- Integrating AI services with robust fallback mechanisms
+- Dynamic, personalized story generation
+- Game mechanics: inventory, path resolution, choice handling
+- Complete application architecture
+- Error handling and resilience
 
 ### 8.5 Backup System
 
