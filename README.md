@@ -8,8 +8,15 @@ A comprehensive 3-day Python programming course for children aged 9-11, teaching
 
 - [Table of Contents](#table-of-contents)
 - [🎯 Learning Objectives](#%F0%9F%8E%AF-learning-objectives)
+  * [Learning Progression](#learning-progression)
+  * [Technical Skills Acquired](#technical-skills-acquired)
 - [What Students Will Build](#what-students-will-build)
+  * [The Enchanted Forest Adventure](#the-enchanted-forest-adventure)
+  * [Key Programming Concepts Learned](#key-programming-concepts-learned)
 - [Course Philosophy](#course-philosophy)
+  * [Child-Friendly Learning Approach](#child-friendly-learning-approach)
+  * [Hands-On Discovery Method](#hands-on-discovery-method)
+  * [Educational Outcomes](#educational-outcomes)
 - [📋 Prerequisites](#%F0%9F%93%8B-prerequisites)
 - [🚀 Complete Installation Guide](#%F0%9F%9A%80-complete-installation-guide)
 - [Step 1: Python Installation](#step-1-python-installation)
@@ -249,6 +256,15 @@ sudo apt update
 sudo apt upgrade -y
 sudo apt install python3 python3-pip python3-tk -y
 ```
+
+Because this program uses Emoji's you will need to install Emoji Fonts
+
+``
+From the menu select:
+  "Preferences" -> "Add / Remove Software" -> "fonts-noto-color-emoji"
+``
+
+you will need the admin password
 
 ### 1.3 Post-Installation Verification
 
