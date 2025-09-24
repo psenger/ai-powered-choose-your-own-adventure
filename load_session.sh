@@ -86,7 +86,7 @@ fi
 
 # Clear src directory, preserving .gitkeep
 echo "Clearing src directory (preserving .gitkeep)..."
-find "$SRC_DIR" -maxdepth 10 -not -name ".gitkeep" -not -name "." -not -name ".." -exec rm -rf {} + 2>/dev/null || true
+find "$SRC_DIR" -mindepth 1 -maxdepth 10 -not -name ".gitkeep" -exec rm -rf {} + 2>/dev/null || true
 
 # Copy session content to src directory
 session_path="$SESSION_DIR/$selected_session"
