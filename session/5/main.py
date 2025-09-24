@@ -9,7 +9,7 @@ Collect items, make choices, and discover interconnected stories.
 import requests
 import configparser
 from typing import List, Optional
-
+import logging
 
 def call_ollama(ollama_host: str, prompt: str, system_prompt: str = "") -> tuple[bool, str]:
     try:
@@ -221,8 +221,16 @@ def get_user_choice(options: List[str], story_graph: dict, inventory: set[str]) 
 def load_graph_from_ini(filename='data.ini') -> dict:
 
     config = configparser.ConfigParser()
-    config.read(filename)
     data = {}
+    try:
+        files_read = config.read(filename)
+        if not files_read:
+            logging.error(f"Could not read file: {filename}")
+            return {}
+        logging.info(f"Successfully read: {files_read}")
+    except Exception as e:
+        logging.error(f"Error reading file: {e}")
+        return {}
 
     for section in config.sections():
         single_node_data = {
@@ -237,10 +245,17 @@ def load_graph_from_ini(filename='data.ini') -> dict:
     return data
 
 def load_stories_from_ini(filename='stories.ini') -> dict:
-
     config = configparser.ConfigParser()
-    config.read(filename)
     data = {}
+    try:
+        files_read = config.read(filename)
+        if not files_read:
+            logging.error(f"Could not read file: {filename}")
+            return {}
+        logging.info(f"Successfully read: {files_read}")
+    except Exception as e:
+        logging.error(f"Error reading file: {e}")
+        return {}
 
     for section in config.sections():
         single_node_data = {
