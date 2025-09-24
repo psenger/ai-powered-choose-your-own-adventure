@@ -84,10 +84,9 @@ else
     touch "$backup_path"
 fi
 
-# Clear src directory
-echo "Clearing src directory..."
-rm -rf "$SRC_DIR"/*
-rm -rf "$SRC_DIR"/.*[!.]* 2>/dev/null || true
+# Clear src directory, preserving .gitkeep
+echo "Clearing src directory (preserving .gitkeep)..."
+find "$SRC_DIR" -maxdepth 1 -not -name ".gitkeep" -not -name "." -not -name ".." -exec rm -rf {} + 2>/dev/null || true
 
 # Copy session content to src directory
 session_path="$SESSION_DIR/$selected_session"
