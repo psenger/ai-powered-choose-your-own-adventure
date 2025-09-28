@@ -422,7 +422,7 @@ print(order_coffee("large"))  # Just changes size
 print(order_coffee("small", "oat", 0))  # Hipster coffee!
 ```
 
-### Functions Calling Other Functions - Teamwork! =e
+### Functions Calling Other Functions - Teamwork!
 
 ```python
 def calculate_pizza_slices_per_person(people, pizzas):
