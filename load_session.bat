@@ -83,6 +83,11 @@ echo Clearing src directory (preserving .gitkeep)...
 del /s /q "%SRC_DIR%\*.py" 2>nul
 del /s /q "%SRC_DIR%\*.md" 2>nul
 del /s /q "%SRC_DIR%\*.ini" 2>nul
+del /s /q "%SRC_DIR%\*.png" 2>nul
+del /s /q "%SRC_DIR%\*.gif" 2>nul
+del /s /q "%SRC_DIR%\*.jpg" 2>nul
+del /s /q "%SRC_DIR%\*.html" 2>nul
+del /s /q "%SRC_DIR%\*.js" 2>nul
 if exist "%SRC_DIR%\support\" rmdir /s /q "%SRC_DIR%\support" 2>nul
 
 REM Copy session content to src directory
